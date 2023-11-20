@@ -1,0 +1,68 @@
+{
+  "name": "docentbot_trigger",
+  "projectId": "0f1ce979-8ac8-47fb-a1d0-078635286777",
+  "description": "Doncentbot Uipath",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Database.Activities": "[1.7.1]",
+    "UiPath.Excel.Activities": "[2.22.2]",
+    "UiPath.Jira.IntegrationService.Activities": "[6.1.0]",
+    "UiPath.Mail.Activities": "[1.21.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.4.3]",
+    "UiPath.Python.Activities": "[1.7.1]",
+    "UiPath.System.Activities": "[22.10.7]",
+    "UiPath.Testing.Activities": "[23.10.0]",
+    "UiPath.UIAutomation.Activities": "[23.10.3]",
+    "UiPath.WebAPI.Activities": "[1.18.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.10.0.0",
+  "projectVersion": "4.0.7",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "d3b8ce9e-6c0f-4972-a7f7-b70406ef88db",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
