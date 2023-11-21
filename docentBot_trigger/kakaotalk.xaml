@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>890,3114.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1031.3333333333333,3397.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>kakaotalk_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -133,7 +133,7 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="kakaotalk" sap:VirtualizedContainerService.HintSize="610.6666666666666,3657.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="kakaotalk" sap:VirtualizedContainerService.HintSize="546,3332.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="password" />
       <Variable x:TypeArguments="ui:Window" Name="UI_element" />
@@ -143,9 +143,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="548.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;send kakao talk start&quot;]" />
-    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="548.6666666666666,25.333333333333332" sap2010:WorkflowViewState.IdRef="GetPassword_5" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvwEBWcNjP0OTqcGq+JmvyQAAAAACAAAAAAAQZgAAAAEAACAAAACAevGbnETo+q6x9pqx1zhI60LPahkOBzbVujn4Nl6ITQAAAAAOgAAAAAIAACAAAADgAM7x5Y7wJ7XVihFCWmFeXvjONN5eg3JAMJJadjAEJhAAAABCFtJPybxJTXXNq5FPoxvfQAAAAK9daBNMFGEQtwaEScuzvPlDnXItcoVCani27ibBCqDM/Hqie268dGbDHdRWMJHjLtcUpq9Odc4WO+09aWKwdno=" Result="[password]" />
-    <ui:CloseApplication ContinueOnError="True" DisplayName="Close Application 'kakaotalk.exe  카카오톡'" sap:VirtualizedContainerService.HintSize="548.6666666666666,107.33333333333333" sap2010:WorkflowViewState.IdRef="CloseApplication_5">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;send kakao talk start&quot;]" />
+    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="484,25.333333333333332" sap2010:WorkflowViewState.IdRef="GetPassword_5" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvwEBWcNjP0OTqcGq+JmvyQAAAAACAAAAAAAQZgAAAAEAACAAAACAevGbnETo+q6x9pqx1zhI60LPahkOBzbVujn4Nl6ITQAAAAAOgAAAAAIAACAAAADgAM7x5Y7wJ7XVihFCWmFeXvjONN5eg3JAMJJadjAEJhAAAABCFtJPybxJTXXNq5FPoxvfQAAAAK9daBNMFGEQtwaEScuzvPlDnXItcoVCani27ibBCqDM/Hqie268dGbDHdRWMJHjLtcUpq9Odc4WO+09aWKwdno=" Result="[password]" />
+    <ui:CloseApplication ContinueOnError="True" DisplayName="Close Application 'kakaotalk.exe  카카오톡'" sap:VirtualizedContainerService.HintSize="484,107.33333333333333" sap2010:WorkflowViewState.IdRef="CloseApplication_5">
       <ui:CloseApplication.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e21819a1-dac0-424b-9f39-cb706f53c129" InformativeScreenshot="16e102292db0ba6e48f9485b8c573ec1" Selector="&lt;wnd app='kakaotalk.exe' cls='EVA_Window_Dblclk' title='카카오톡' /&gt;">
           <ui:Target.TimeoutMS>
@@ -157,7 +157,7 @@
         </ui:Target>
       </ui:CloseApplication.Target>
     </ui:CloseApplication>
-    <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" ApplicationWindow="[UI_element]" DisplayName="Open Application 'kakaotalk.exe  카카오톡'" FileName="C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" sap:VirtualizedContainerService.HintSize="548.6666666666666,524.6666666666666" sap2010:WorkflowViewState.IdRef="OpenApplication_3" Selector="&lt;wnd app='kakaotalk.exe' cls='EVA_Window' title='카카오톡' /&gt;">
+    <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" ApplicationWindow="[UI_element]" DisplayName="Open Application 'kakaotalk.exe  카카오톡'" FileName="C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" sap:VirtualizedContainerService.HintSize="484,524.6666666666666" sap2010:WorkflowViewState.IdRef="OpenApplication_3" Selector="&lt;wnd app='kakaotalk.exe' cls='EVA_Window' title='카카오톡' /&gt;">
       <ui:OpenApplication.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -210,13 +210,14 @@
         </ActivityAction>
       </ui:OpenApplication.Body>
     </ui:OpenApplication>
-    <Sequence DisplayName="카카오 검색 및 자동 채팅" sap:VirtualizedContainerService.HintSize="548.6666666666666,2062" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="카카오 검색 및 자동 채팅" sap:VirtualizedContainerService.HintSize="484,2075.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'kakaotalk.exe  카카오톡'" sap:VirtualizedContainerService.HintSize="486.6666666666667,156.66666666666666" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="f" KeyModifiers="Ctrl" SpecialKey="False">
+      <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_4" />
+      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'kakaotalk.exe  카카오톡'" sap:VirtualizedContainerService.HintSize="388,156.66666666666666" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="f" KeyModifiers="Ctrl" SpecialKey="False">
         <ui:SendHotkey.Target>
           <ui:Target Element="{x:Null}" Id="c5b0fe98-63ea-4a0c-a959-73619fe7222c" InformativeScreenshot="c04ed0292d6d30c4c41b760c22db9070" Selector="&lt;wnd app='kakaotalk.exe' cls='EVA_Window_Dblclk' title='카카오톡' /&gt;">
             <ui:Target.ClippingRegion>
@@ -231,7 +232,8 @@
           </ui:Target>
         </ui:SendHotkey.Target>
       </ui:SendHotkey>
-      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="486.6666666666667,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="오한나">
+      <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_3" />
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="오한나">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22904966-7c82-471b-90aa-c61f62c82147" InformativeScreenshot="fbe37ad84f48595ed969cb413b214b55" Selector="&lt;wnd app='kakaotalk.exe' cls='EVA_Window_Dblclk' title='카카오톡' /&gt;&lt;wnd cls='EVA_ChildWindow' /&gt;&lt;wnd cls='EVA_Window' /&gt;&lt;wnd cls='Edit' /&gt;" TimeoutMS="1000">
             <ui:Target.WaitForReady>
@@ -240,7 +242,7 @@
           </ui:Target>
         </ui:TypeInto.Target>
       </ui:TypeInto>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'EVA_VH_ListControl_Dblc...'" sap:VirtualizedContainerService.HintSize="486.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'EVA_VH_ListControl_Dblc...'" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -265,9 +267,10 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="486.6666666666667,136.66666666666666" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="d" KeyModifiers="Win">
+      <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_2" />
+      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'kakaotalk.exe  오한나'" sap:VirtualizedContainerService.HintSize="388,156.66666666666666" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="t" KeyModifiers="Ctrl">
         <ui:SendHotkey.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c879c810-4b98-43f1-9f25-f3813b156636">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d5c07de-c4f0-4a57-a6d5-fb34506b59bd" InformativeScreenshot="94edc3b37df8b4253ff337b56b096f5a" Selector="&lt;wnd app='kakaotalk.exe' cls='#32770' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -277,19 +280,7 @@
           </ui:Target>
         </ui:SendHotkey.Target>
       </ui:SendHotkey>
-      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'kakaotalk.exe  오한나'" sap:VirtualizedContainerService.HintSize="486.6666666666667,156.66666666666666" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="t" KeyModifiers="Ctrl">
-        <ui:SendHotkey.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d5c07de-c4f0-4a57-a6d5-fb34506b59bd" InformativeScreenshot="94edc3b37df8b4253ff337b56b096f5a" Selector="&lt;wnd app='kakaotalk.exe' cls='#32770' title='오한나' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-            <ui:Target.WaitForReady>
-              <InArgument x:TypeArguments="ui:WaitForReady" />
-            </ui:Target.WaitForReady>
-          </ui:Target>
-        </ui:SendHotkey.Target>
-      </ui:SendHotkey>
-      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="486.6666666666667,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[IN_excel_path]">
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="20231121_153353_1_1.xlsx">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22904966-7c82-471b-90aa-c61f62c82147" InformativeScreenshot="3377a2868b2d4ff444968507490d1959" Selector="&lt;wnd app='kakaotalk.exe' cls='#32770' title='열기' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" TimeoutMS="1000">
             <ui:Target.WaitForReady>
@@ -298,7 +289,7 @@
           </ui:Target>
         </ui:TypeInto.Target>
       </ui:TypeInto>
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="486.6666666666667,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -320,40 +311,8 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,298" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_14">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'kakaotalk.exe'" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
-              <ui:Click.CursorPosition>
-                <ui:CursorPosition Position="Center">
-                  <ui:CursorPosition.OffsetX>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetX>
-                  <ui:CursorPosition.OffsetY>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:CursorPosition.OffsetY>
-                </ui:CursorPosition>
-              </ui:Click.CursorPosition>
-              <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="15b88d68-5c46-4703-afe4-184867a4cb92" InformativeScreenshot="39b846c366a27030ee2a2a988d48b686" Selector="&lt;wnd app='kakaotalk.exe' cls='EVA_Window_Dblclk' idx='*' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:Click.Target>
-            </ui:Click>
-          </Sequence>
-        </ui:CommentOut.Body>
-      </ui:CommentOut>
-      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'kakaotalk.exe'" sap:VirtualizedContainerService.HintSize="486.6666666666667,156.66666666666666" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="enter" KeyModifiers="None" SpecialKey="True">
+      <Delay Duration="[TimeSpan.FromMilliseconds(3000)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_1" />
+      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'kakaotalk.exe'" sap:VirtualizedContainerService.HintSize="388,156.66666666666666" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="enter" KeyModifiers="None" SpecialKey="True">
         <ui:SendHotkey.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66856701-bfe7-4515-a9ab-37ed72444c15" InformativeScreenshot="92a2b9441a8106e4505febf4ca04e23b" Selector="&lt;wnd app='kakaotalk.exe' cls='EVA_Window_Dblclk' idx='*' /&gt;">
             <ui:Target.TimeoutMS>
@@ -365,7 +324,7 @@
           </ui:Target>
         </ui:SendHotkey.Target>
       </ui:SendHotkey>
-      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'RICHEDIT50W'" sap:VirtualizedContainerService.HintSize="486.6666666666667,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[String.Format(&quot;요청처리를 완료하였습니다.{0}&quot;,Chr(13))]">
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'RICHEDIT50W'" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[String.Format(&quot;요청처리를 완료하였습니다.{0}&quot;,Chr(13))]">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5c844747-a6dd-4587-b45e-d9a13c43f284" InformativeScreenshot="4972bc88ba55878ddcf8c4ad852b7516" Selector="&lt;wnd app='kakaotalk.exe' cls='#32770' /&gt;&lt;wnd ctrlid='1006' /&gt;">
             <ui:Target.TimeoutMS>
@@ -378,29 +337,6 @@
         </ui:TypeInto.Target>
       </ui:TypeInto>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="548.6666666666666,298" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_15">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:CloseApplication ContinueOnError="True" DisplayName="Close Application 'kakaotalk.exe  카카오톡'" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="CloseApplication_6">
-            <ui:CloseApplication.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e21819a1-dac0-424b-9f39-cb706f53c129" InformativeScreenshot="16e102292db0ba6e48f9485b8c573ec1" Selector="&lt;wnd app='kakaotalk.exe' cls='EVA_Window_Dblclk' title='카카오톡' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:CloseApplication.Target>
-          </ui:CloseApplication>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="548.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;send kakao talk end&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;send kakao talk end&quot;]" />
   </Sequence>
 </Activity>

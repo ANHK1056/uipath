@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1031.3333333333333,1956.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>958,2361.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>요청_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -135,135 +135,157 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="요청" sap:VirtualizedContainerService.HintSize="809.3333333333334,1892" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="요청" sap:VirtualizedContainerService.HintSize="913.3333333333334,2296.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="AttachedImage" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umab:OutlookApplicationCard Account="sun981122kosa@gmail.com" AccountMismatchBehavior="Fail" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="747.3333333333334,1781.3333333333333" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
-      <umab:OutlookApplicationCard.Body>
-        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="713.3333333333334,1593.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="851.3333333333334,2186" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="[TimeSpan.FromSeconds(10)]">
+      <ui:RetryScope.ActivityBody>
+        <ActivityAction>
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="809.3333333333334,1892" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umab:ForEachEmailX MailFilter="{x:Null}" DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="651.3333333333334,1482.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Outlook.Folder(&quot;%EB%B0%9B%EC%9D%80%20%ED%8E%B8%EC%A7%80%ED%95%A8&quot;)]" NumberOfEmailsLimit="100" UnreadOnly="True" WithAttachmentsOnly="False">
-              <umab:ForEachEmailX.Body>
-                <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
-                  <ActivityAction.Argument1>
-                    <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrentMail" />
-                  </ActivityAction.Argument1>
-                  <ActivityAction.Argument2>
-                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
-                  </ActivityAction.Argument2>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="617.3333333333334,1210.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <umab:OutlookApplicationCard Account="sun981122kosa@gmail.com" AccountMismatchBehavior="Fail" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="747.3333333333334,1781.3333333333333" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+              <umab:OutlookApplicationCard.Body>
+                <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="713.3333333333334,1593.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[CurrentMail.Body.Contains(&quot;[제목]&quot;)]" sap:VirtualizedContainerService.HintSize="555.3333333333334,1100" sap2010:WorkflowViewState.IdRef="If_1">
-                      <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="521.3333333333334,916" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="AttachedImage" />
-                            <Variable x:TypeArguments="x:String" Default="[mail_path]" Name="mailPath" />
-                            <Variable x:TypeArguments="x:String" Default="[audio_path]" Name="audioPath" />
-                            <Variable x:TypeArguments="ui:DatabaseConnection" Default="[In_conn]" Name="conn" />
-                            <Variable x:TypeArguments="x:String" Name="Req_Email" />
-                            <Variable x:TypeArguments="x:String" Name="Req_Title" />
-                            <Variable x:TypeArguments="x:String" Name="Req_image" />
-                          </Sequence.Variables>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <umab:SaveMailAttachmentsX Attachments="[AttachedImage]" DisplayName="Save Email Attachments" ExcludeInlineAttachments="False" Filter="*.jpg" FolderPath="[mailPath]" sap:VirtualizedContainerService.HintSize="479.3333333333333,238" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrentMail]" OverwriteExisting="True" />
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479.3333333333333,209.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
-                            <ui:MultipleAssign.AssignOperations>
-                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[Req_Email]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[CurrentMail.Subject]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[Req_Title]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[CurrentMail.Body.Split("[내용]: ")(0).Split("[제목]: ")(1)]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[Req_Content]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[CurrentMail.Body.Split("[내용]: ")(1)]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-                                  <ui:AssignOperation.To>
-                                    <OutArgument x:TypeArguments="x:String">[Req_image]</OutArgument>
-                                  </ui:AssignOperation.To>
-                                  <ui:AssignOperation.Value>
-                                    <InArgument x:TypeArguments="x:String">[Path.GetFileName(AttachedImage(0))]</InArgument>
-                                  </ui:AssignOperation.Value>
-                                </ui:AssignOperation>
-                              </scg:List>
-                            </ui:MultipleAssign.AssignOperations>
-                          </ui:MultipleAssign>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ChatGPT.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="479.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ChatGPT.xaml">
-                            <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
-                              <InArgument x:TypeArguments="x:String" x:Key="mail_Path">
-                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="mailPath" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="Req_Content">
-                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Req_Content" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="snm:MailMessage" x:Key="current_mail">
-                                <VisualBasicValue x:TypeArguments="snm:MailMessage" ExpressionText="CurrentMail" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DB_conn">
-                                <VisualBasicValue x:TypeArguments="ui:DatabaseConnection" ExpressionText="conn" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="IN_Req_Image">
-                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Req_image" />
-                              </InArgument>
-                            </ui:InvokeWorkflowFile.Arguments>
-                          </ui:InvokeWorkflowFile>
-                          <ui:MarkOutlookMailAsRead DisplayName="Mark Outlook Mail As Read/Unread" sap:VirtualizedContainerService.HintSize="479.3333333333333,146" sap2010:WorkflowViewState.IdRef="MarkOutlookMailAsRead_1" MailMessage="[CurrentMail]" MarkAs="Read" />
-                        </Sequence>
-                      </If.Then>
-                      <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="300,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </Sequence>
-                      </If.Else>
-                    </If>
+                    <umab:ForEachEmailX MailFilter="{x:Null}" DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="651.3333333333334,1482.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Outlook.Folder(&quot;%EB%B0%9B%EC%9D%80%20%ED%8E%B8%EC%A7%80%ED%95%A8&quot;)]" NumberOfEmailsLimit="100" UnreadOnly="True" WithAttachmentsOnly="False">
+                      <umab:ForEachEmailX.Body>
+                        <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrentMail" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="617.3333333333334,1210.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[CurrentMail.Body.Contains(&quot;[제목]&quot;)]" sap:VirtualizedContainerService.HintSize="555.3333333333334,1100" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="521.3333333333334,916" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:String" Default="[audio_path]" Name="audioPath" />
+                                    <Variable x:TypeArguments="ui:DatabaseConnection" Default="[In_conn]" Name="conn" />
+                                    <Variable x:TypeArguments="x:String" Name="Req_Title" />
+                                    <Variable x:TypeArguments="x:String" Name="Req_image" />
+                                    <Variable x:TypeArguments="x:String" Name="Req_Email" />
+                                    <Variable x:TypeArguments="x:String" Default="[mail_path]" Name="mailPath" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <umab:SaveMailAttachmentsX Attachments="[AttachedImage]" DisplayName="Save Email Attachments" ExcludeInlineAttachments="False" Filter="*.jpg" FolderPath="[mailPath]" sap:VirtualizedContainerService.HintSize="479.3333333333333,238" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrentMail]" OverwriteExisting="True" />
+                                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479.3333333333333,209.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                                    <ui:MultipleAssign.AssignOperations>
+                                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="x:String">[Req_Email]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="x:String">[CurrentMail.Subject]</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="x:String">[Req_Title]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="x:String">[CurrentMail.Body.Split("[내용]: ")(0).Split("[제목]: ")(1)]</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="x:String">[Req_Content]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="x:String">[CurrentMail.Body.Split("[내용]: ")(1)]</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="x:String">[Req_image]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="x:String">[Path.GetFileName(AttachedImage(0))]</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
+                                      </scg:List>
+                                    </ui:MultipleAssign.AssignOperations>
+                                  </ui:MultipleAssign>
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ChatGPT.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="479.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ChatGPT.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
+                                      <InArgument x:TypeArguments="x:String" x:Key="mail_Path">[mailPath]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="Req_Content">[Req_Content]</InArgument>
+                                      <InArgument x:TypeArguments="snm:MailMessage" x:Key="current_mail">[CurrentMail]</InArgument>
+                                      <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="DB_conn">[conn]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="IN_Req_Image">[Req_image]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                  <ui:MarkOutlookMailAsRead DisplayName="Mark Outlook Mail As Read/Unread" sap:VirtualizedContainerService.HintSize="479.3333333333333,146" sap2010:WorkflowViewState.IdRef="MarkOutlookMailAsRead_1" MailMessage="[CurrentMail]" MarkAs="Read" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="300,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </umab:ForEachEmailX.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </umab:ForEachEmailX>
                   </Sequence>
                 </ActivityAction>
-              </umab:ForEachEmailX.Body>
-            </umab:ForEachEmailX>
+              </umab:OutlookApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </umab:OutlookApplicationCard>
           </Sequence>
         </ActivityAction>
-      </umab:OutlookApplicationCard.Body>
-    </umab:OutlookApplicationCard>
+      </ui:RetryScope.ActivityBody>
+      <ui:RetryScope.Condition>
+        <ActivityFunc x:TypeArguments="x:Boolean">
+          <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Check True" Expression="[AttachedImage IsNot Nothing]" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="CheckTrue_2" />
+        </ActivityFunc>
+      </ui:RetryScope.Condition>
+    </ui:RetryScope>
   </Sequence>
 </Activity>

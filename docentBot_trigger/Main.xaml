@@ -206,38 +206,55 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,727 300,757 310,757 310,793</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEach x:TypeArguments="s:Object[]" CurrentIndex="{x:Null}" DisplayName="TTS 생성시 이메일 및 excel파일 생성" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[result]">
+              <ui:ForEach x:TypeArguments="s:Object[]" CurrentIndex="[iter]" DisplayName="TTS 생성시 이메일 및 excel파일 생성" sap:VirtualizedContainerService.HintSize="548.6666666666666,715.3333333333334" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[result]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="s:Object[]">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Object[]" Name="currentItem" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="558,617.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                    <Sequence sap:VirtualizedContainerService.HintSize="512,586" sap2010:WorkflowViewState.IdRef="Sequence_63">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,506.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,475.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_61">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Int32">[iter]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">[iter +1]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="send_TTS_by_email" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="send_TTS_by_email.xaml">
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,196" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[iter]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[iter +1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="send_TTS_by_email" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="send_TTS_by_email.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="s:Object[]" x:Key="OB_result">[currentItem]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create request Excel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Create request Excel.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create request Excel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Create_request_Excel.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="IN_excel_file">
                               <VisualBasicValue x:TypeArguments="x:String" ExpressionText="args.FileChangeInfo.FullPath.ToString" />
@@ -249,7 +266,7 @@
                               <VisualBasicValue x:TypeArguments="x:String" ExpressionText="id" />
                             </InArgument>
                             <InArgument x:TypeArguments="x:Int32" x:Key="IN_iter">
-                              <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="iter" />
+                              <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="iter + 2" />
                             </InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
@@ -338,7 +355,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">350,337 350,367 290,367 290,433</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="674.6666666666666,1340.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                         <TryCatch.Try>
                           <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="도슨트 아이디 입력" sap:VirtualizedContainerService.HintSize="636,1101.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
                             <ueab:ExcelProcessScopeX.Body>
@@ -364,7 +381,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;요청 목록&quot;).Cell(&quot;F2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+                                          <ueab:ReadCellValueX Cell="[Excel.Sheet(&quot;로그 리스트&quot;).Cell(&quot;A2&quot;)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="444,164.66666666666666" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
                                             <ueab:ReadCellValueX.SaveTo>
                                               <OutArgument x:TypeArguments="x:String">[id]</OutArgument>
                                             </ueab:ReadCellValueX.SaveTo>
@@ -437,29 +454,35 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">433,27.33333333333333</av:Point>
-                  <av:Size x:Key="ShapeSize">434,85.33333333333333</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">650,112.66666666666666 650,136.66666666666666 430,136.66666666666666 430,106.66666666666666 350,106.66666666666666 350,136.66666666666666</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,54</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">533,81.33333333333333 533,111.33333333333334 350,111.33333333333334 350,136.66666666666666</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="셀 변수 지정" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:Int32">[iter]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
-                </Assign.Value>
-              </Assign>
+              <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                    <Assign DisplayName="셀 변수 지정" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[iter]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ui:CommentOut.Body>
+              </ui:CommentOut>
               <FlowStep.Next>
                 <x:Reference>__ReferenceID5</x:Reference>
               </FlowStep.Next>
             </FlowStep>
             <x:Reference>__ReferenceID4</x:Reference>
-            <FlowStep x:Name="__ReferenceID7">
+            <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">199.99999999999997,13</av:Point>
                   <av:Size x:Key="ShapeSize">200,54</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">400,40 430,40 430,70 433,70</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">400,40 430,40 430,54.33333333333333 433,54.33333333333333</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="Delay_2" />
