@@ -1,0 +1,14 @@
+﻿{
+  "Name": "오한나",
+  "Type": "Screen",
+  "TaxonomyType": "Screen",
+  "Id": "aweL6WVtt0y32vrqDmsGnA",
+  "Reference": "qINOASdUz0OCDdrSXNtU5w/aweL6WVtt0y32vrqDmsGnA",
+  "ParentRef": "qINOASdUz0OCDdrSXNtU5w/BIYU9TDc2E2ly2UZvLldjA",
+  "Created": "2023-11-22T09:17:09.7014057Z",
+  "Updated": "2023-11-22T09:17:09.7014057Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
