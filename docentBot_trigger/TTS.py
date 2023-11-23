@@ -20,6 +20,7 @@ def TTS(user_id):
             JOIN USERS u
             ON p.users_id = u.id
             WHERE p.audio IS NOT NULL and p.res_time IS NULL
+            order by p.id desc
             """
     cur.execute(sql_select)
     results = cur.fetchall()

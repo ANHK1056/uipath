@@ -233,7 +233,7 @@
         </ui:SendHotkey.Target>
       </ui:SendHotkey>
       <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_3" />
-      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="오한나">
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="보낼 사람 정하기" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="오한나">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22904966-7c82-471b-90aa-c61f62c82147" InformativeScreenshot="fbe37ad84f48595ed969cb413b214b55" Selector="&lt;wnd app='kakaotalk.exe' cls='EVA_Window_Dblclk' title='카카오톡' /&gt;&lt;wnd cls='EVA_ChildWindow' /&gt;&lt;wnd cls='EVA_Window' /&gt;&lt;wnd cls='Edit' /&gt;" TimeoutMS="1000">
             <ui:Target.WaitForReady>
@@ -293,7 +293,7 @@
         </ui:Click.Target>
       </ui:Click>
       <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_2" />
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'kakaotalk.exe  오한나'" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="파일 첨부" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -305,7 +305,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target Element="{x:Null}" Id="a9f3afe5-0f7c-4f3d-b7b3-04c118d745b0" InformativeScreenshot="dcb9ccbb78044e2a2b13d2e256fa5e8e" Selector="&lt;wnd app='kakaotalk.exe' cls='#32770' title='오한나' /&gt;">
+          <ui:Target Element="{x:Null}" Id="a9f3afe5-0f7c-4f3d-b7b3-04c118d745b0" InformativeScreenshot="dcb9ccbb78044e2a2b13d2e256fa5e8e" Selector="&lt;wnd app='kakaotalk.exe' cls='#32770' /&gt;">
             <ui:Target.ClippingRegion>
               <ui:Region Rectangle="108, 598, 22, 26" />
             </ui:Target.ClippingRegion>
@@ -318,7 +318,7 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[IN_excel_path+ Chr(13)]">
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="파일 경로" EmptyField="True" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[&quot;20231122_175101_1_1.xlsx&quot;+ Chr(13)]">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22904966-7c82-471b-90aa-c61f62c82147" InformativeScreenshot="3377a2868b2d4ff444968507490d1959" Selector="&lt;wnd app='kakaotalk.exe' cls='#32770' title='열기' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" TimeoutMS="1000">
             <ui:Target.WaitForReady>
@@ -328,7 +328,7 @@
         </ui:TypeInto.Target>
       </ui:TypeInto>
       <Delay Duration="[TimeSpan.FromMilliseconds(1000)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_1" />
-      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'kakaotalk.exe'" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="파일 전송" sap:VirtualizedContainerService.HintSize="388,107.33333333333333" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -353,7 +353,7 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'RICHEDIT50W'" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[String.Format(&quot;요청처리를 완료하였습니다.{0}&quot;,Chr(13))]">
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="메시지 전송" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[String.Format(&quot;요청처리를 완료하였습니다.{0}&quot;,Chr(13))]">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5c844747-a6dd-4587-b45e-d9a13c43f284" InformativeScreenshot="4972bc88ba55878ddcf8c4ad852b7516" Selector="&lt;wnd app='kakaotalk.exe' cls='#32770' /&gt;&lt;wnd ctrlid='1006' /&gt;">
             <ui:Target.TimeoutMS>
