@@ -125,6 +125,11 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="p:PythonObject" Name="filehandler" />
               <Variable x:TypeArguments="p:PythonObject" Name="mainresult" />
+              <Variable x:TypeArguments="x:String" Name="oracle_user_id">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">kcc21</Literal>
+                </Variable.Default>
+              </Variable>
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -132,7 +137,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="LoadScript_1" Result="[filehandler]" ScriptFile="TTS.py" />
-            <p:InvokeMethod DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" Instance="[filehandler]" Name="TTS" Parameters="[{&quot;kcc21&quot;}]" Result="[mainresult]" />
+            <p:InvokeMethod DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" Instance="[filehandler]" Name="TTS" Parameters="[{oracle_user_id}]" Result="[mainresult]" />
             <p:GetObject x:TypeArguments="s:Object[][]" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="GetObject`1_3" PythonObject="[mainresult]" Result="[result]" />
           </Sequence>
         </ActivityAction>
