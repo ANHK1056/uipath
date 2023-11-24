@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1031.3333333333333,5132</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1031.3333333333333,5129.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GPT_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -114,16 +114,12 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ChatGPT" sap:VirtualizedContainerService.HintSize="664,5067.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ChatGPT" sap:VirtualizedContainerService.HintSize="664,5064.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="Brower" />
       <Variable x:TypeArguments="x:String" Name="query" />
       <Variable x:TypeArguments="x:String" Name="Rtext" />
-      <Variable x:TypeArguments="x:String" Name="ReqImage">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="IN_Req_Image" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="[IN_Req_Image]" Name="ReqImage" />
       <Variable x:TypeArguments="x:String" Default="[Req_Content]" Name="ReqContent" />
       <Variable x:TypeArguments="x:String" Default="[mail_Path]" Name="mailPath" />
       <Variable x:TypeArguments="snm:MailMessage" Default="[current_mail]" Name="CurrentMail" />
@@ -376,7 +372,7 @@
         <OutArgument x:TypeArguments="x:String">[Rtext]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[Rtext.Replace("'", """")]</InArgument>
+        <InArgument x:TypeArguments="x:String">[Rtext.Replace("'", "''")]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="602,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -387,7 +383,7 @@
         <InArgument x:TypeArguments="x:String">[IN_Req_Image.Replace(".jpg", "")]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="602,88.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="602,86" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[query]</OutArgument>
       </Assign.To>
