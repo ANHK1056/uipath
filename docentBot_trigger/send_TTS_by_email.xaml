@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1031.3333333333333,1107.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1031.3333333333333,1140.6666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>send_TTS_by_email_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -101,7 +101,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="send_TTS_by_email" sap:VirtualizedContainerService.HintSize="592,1042.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="send_TTS_by_email" sap:VirtualizedContainerService.HintSize="592,1076" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="path" />
     </Sequence.Variables>
@@ -110,13 +110,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umab:OutlookApplicationCard Account="sun981122kosa@gmail.com" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="530,932" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+    <umab:OutlookApplicationCard Account="sun981122kosa@gmail.com" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="530,965.3333333333334" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
       <umab:OutlookApplicationCard.Body>
         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,744" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,777.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:Object[]" Default="[OB_result]" Name="result" />
             </Sequence.Variables>
@@ -126,7 +126,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;start to send email response TTS&quot;]" />
-            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="[String.Format(&quot;요청 완료하였습니다.{0}&#xD;&#xA;http://192.168.230.13:8088/painting/select/des/{1}{2}&#xD;&#xA;https://docs.google.com/forms/d/e/1FAIpQLSdwLacA2p5HS3rWiyEa0hRikh0Ho_yKihE3gr2PngU8yh3wXg/viewform?usp=sf_link&#xD;&#xA;&quot;,  Chr(13),result(1),Chr(13))]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,448.6666666666667" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[String.Format(&quot;{0}&quot;, result)]" To="sun981122kosa@gmail.com" UseDocumentAsBody="False">
+            <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Outlook]" Body="[String.Format(&quot;요청 완료하였습니다.{0}&#xD;&#xA;아래 링크를 통해 결과물을 확인하세요!{1}&#xD;&#xA;http://192.168.230.13:8088/painting/select/des/{2}{3}&#xD;&#xA;아래 링크를 통해 도슨트봇에 대한 만족도를 평가해 주세요.{4}&#xD;&#xA;https://docs.google.com/forms/d/e/1FAIpQLSdwLacA2p5HS3rWiyEa0hRikh0Ho_yKihE3gr2PngU8yh3wXg/viewform?usp=sf_link&#xD;&#xA;&quot;,  Chr(13),Chr(13),result(1),Chr(13),Chr(13))]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,482" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[String.Format(&quot;{0}&quot;, result)]" To="sun981122kosa@gmail.com" UseDocumentAsBody="False">
               <umab:SendMailX.Files>
                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
               </umab:SendMailX.Files>
