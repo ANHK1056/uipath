@@ -151,13 +151,18 @@
                     <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,594.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_12">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Default="[IN_id]" Name="id" />
+                        <Variable x:TypeArguments="x:String" Name="VBA_url_">
+                          <Variable.Default>
+                            <Literal x:TypeArguments="x:String">C:\dev\DocentBot\url.bas</Literal>
+                          </Variable.Default>
+                        </Variable>
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:InvokeVBAX Result="{x:Null}" CodeFilePath="C:\dev\DocentBot\url.bas" DisplayName="Invoke VBA" EntryMethodName="SetURL" sap:VirtualizedContainerService.HintSize="434,484" sap2010:WorkflowViewState.IdRef="InvokeVBAX_4" Workbook="[Excel]">
+                      <ueab:InvokeVBAX Result="{x:Null}" CodeFilePath="[VBA_url_]" DisplayName="Invoke VBA" EntryMethodName="SetURL" sap:VirtualizedContainerService.HintSize="434,484" sap2010:WorkflowViewState.IdRef="InvokeVBAX_4" Workbook="[Excel]">
                         <ueab:InvokeVBAX.Body>
                           <ActivityAction>
                             <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_14">

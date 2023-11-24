@@ -347,7 +347,14 @@
                           <av:PointCollection x:Key="ConnectorLocation">350,337 350,367 290,367 290,433</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="674.6666666666666,1340.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                        <TryCatch.Variables>
+                          <Variable x:TypeArguments="x:String" Name="VBA_code_request">
+                            <Variable.Default>
+                              <Literal x:TypeArguments="x:String">C:\dev\DocentBot\request.bas</Literal>
+                            </Variable.Default>
+                          </Variable>
+                        </TryCatch.Variables>
                         <TryCatch.Try>
                           <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="도슨트 아이디 입력" sap:VirtualizedContainerService.HintSize="636,1101.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
                             <ueab:ExcelProcessScopeX.Body>
@@ -378,7 +385,7 @@
                                               <OutArgument x:TypeArguments="x:String">[id]</OutArgument>
                                             </ueab:ReadCellValueX.SaveTo>
                                           </ueab:ReadCellValueX>
-                                          <ueab:InvokeVBAX Result="{x:Null}" CodeFilePath="C:\dev\DocentBot\request.bas" DisplayName="Invoke VBA" EntryMethodName="request" sap:VirtualizedContainerService.HintSize="444,307.3333333333333" sap2010:WorkflowViewState.IdRef="InvokeVBAX_2" Workbook="[Excel]">
+                                          <ueab:InvokeVBAX Result="{x:Null}" CodeFilePath="[VBA_code_request]" DisplayName="Invoke VBA" EntryMethodName="request" sap:VirtualizedContainerService.HintSize="444,307.3333333333333" sap2010:WorkflowViewState.IdRef="InvokeVBAX_2" Workbook="[Excel]">
                                             <ueab:InvokeVBAX.Body>
                                               <ActivityAction>
                                                 <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_69">
